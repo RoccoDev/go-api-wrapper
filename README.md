@@ -1,5 +1,10 @@
 # Go API Wrapper for roccodev.pw
 
+## Get
+```
+go get roccodev.pw/api
+```
+
 ## Usage
 ### Monthlies
 #### Profile
