@@ -11,10 +11,10 @@ import (
 // Main URL
 const MainURL = "https://api.roccodev.pw/"
 
-const MonthliesURL = "/monthlies/"
-const FarmersURL = "/farmers/"
-const WinstreaksURL = "/winstreaks/"
-const HistoURL = "/winstreaks/historical/"
+const MonthliesURL = "/monthlies"
+const FarmersURL = "/farmers"
+const WinstreaksURL = "/winstreaks"
+const HistoURL = "/winstreaks/historical"
 
 const ProfileURL = "/profile/"
 const LeaderboardURL = "/leaderboard/"
@@ -30,22 +30,22 @@ const UrlGnt = "gnt"
 const UrlGntm = "gntm"
 const UrlTimv = "timv"
 
-func generateMonthlyURL(game string, endpoint string) strings.Builder {
+func generateMonthlyURL(game string, endpoint string) *strings.Builder {
 	var builder strings.Builder
 	builder.WriteString(MainURL)
 	builder.WriteString(game)
 	builder.WriteString(MonthliesURL)
 	builder.WriteString(endpoint)
-	return builder
+	return &builder
 }
 
-func generateFarmersUrl(endpoint string) strings.Builder {
+func generateFarmersUrl(endpoint string) *strings.Builder {
 	var builder strings.Builder
 	builder.WriteString(MainURL)
 	builder.WriteString(UrlBedwars)
 	builder.WriteString(FarmersURL)
 	builder.WriteString(endpoint)
-	return builder
+	return &builder
 }
 
 func MonthlyProfile(game string, uuid string) string {
