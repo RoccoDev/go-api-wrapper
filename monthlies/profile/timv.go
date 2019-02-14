@@ -6,6 +6,7 @@ import (
 	"roccodev.pw/api/url"
 )
 
+// Trouble in Mineville monthly profile.
 type TimvMonthlyProfile struct {
 	MonthlyProfile
 	MostChange      string `json:"most_change"`

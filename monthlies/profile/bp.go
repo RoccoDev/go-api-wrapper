@@ -6,6 +6,7 @@ import (
 	"roccodev.pw/api/url"
 )
 
+// BlockParty monthly profile.
 type BpMonthlyProfile struct {
 	MonthlyProfile
 	Placings     int

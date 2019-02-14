@@ -6,6 +6,7 @@ import (
 	"roccodev.pw/api/url"
 )
 
+// Cowboys and indians monthly profile.
 type CaiMonthlyProfile struct {
 	MonthlyProfile
 	Captures int

@@ -12,18 +12,22 @@ type pvpMonthlyProfile struct {
 	Deaths int
 }
 
+// SkyGiants monthly profile.
 type GntMonthlyProfile struct {
 	pvpMonthlyProfile
 }
 
+// SkyGiants:Mini monthly profile.
 type GntmMonthlyProfile struct {
 	GntMonthlyProfile
 }
 
+// DeathRun monthly profile.
 type DrMonthlyProfile struct {
 	pvpMonthlyProfile
 }
 
+// SkyWars monthly profile.
 type SkyMonthlyProfile struct {
 	pvpMonthlyProfile
 }

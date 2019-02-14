@@ -6,6 +6,7 @@ import (
 	"roccodev.pw/api/url"
 )
 
+// Hide and Seek monthly profile.
 type HideMonthlyProfile struct {
 	MonthlyProfile
 	HiderKills  int `json:"hider_kills"`

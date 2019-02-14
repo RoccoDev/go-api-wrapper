@@ -6,6 +6,7 @@ import (
 	"roccodev.pw/api/url"
 )
 
+// Bedwars monthly profile.
 type BedMonthlyProfile struct {
 	pvpMonthlyProfile
 	Beds  int
