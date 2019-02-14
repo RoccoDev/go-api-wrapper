@@ -1,6 +1,7 @@
 package leaderboard
 
 import (
+	"encoding/json"
 	"roccodev.pw/api/monthlies/profile"
 	"roccodev.pw/api/url"
 )

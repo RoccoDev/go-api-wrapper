@@ -1,23 +1,10 @@
 package leaderboard
 
 import (
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"roccodev.pw/api/monthlies/profile"
 )
-
-func GetLeaderboard() {
-
-	body := downloadJson("https://api.roccodev.pw/bed/monthlies/leaderboard?from=0&to=1")
-
-	var res map[string]profile.BedMonthlyProfile
-	json.Unmarshal(body, &res)
-
-	println(res["e891f022633a4bf28f4030493fda9bbb"].Place)
-
-}
 
 func downloadJson(url string) []byte {
 	res, e := http.Get(url)
