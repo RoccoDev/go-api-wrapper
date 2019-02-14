@@ -9,8 +9,9 @@ import (
 // Bedwars monthly profile.
 type BedMonthlyProfile struct {
 	pvpMonthlyProfile
-	Beds  int
-	Teams int
+	Username string `json:"name"`
+	Beds     int
+	Teams    int
 }
 
 func (prof *BedMonthlyProfile) getFromRaw(data []byte) {
