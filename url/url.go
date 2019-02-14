@@ -19,6 +19,11 @@ const HistoURL = "/winstreaks/historical"
 const ProfileURL = "/profile/"
 const LeaderboardURL = "/leaderboard/"
 
+const BedSolo = "beds"
+const BedTeams = "bedt"
+const BedLTM = "bedx"
+const BedDuos = "bedd"
+
 /* Game names */
 const UrlBedwars = "bed"
 const UrlSkywars = "sky"
@@ -35,6 +40,19 @@ func generateMonthlyURL(game string, endpoint string) *strings.Builder {
 	builder.WriteString(MainURL)
 	builder.WriteString(game)
 	builder.WriteString(MonthliesURL)
+	builder.WriteString(endpoint)
+	return &builder
+}
+
+func generateStreaksUrl(game string, endpoint string, historical bool) *strings.Builder {
+	var builder strings.Builder
+	builder.WriteString(MainURL)
+	builder.WriteString(game)
+	if historical {
+		builder.WriteString(HistoURL)
+	} else {
+		builder.WriteString(WinstreaksURL)
+	}
 	builder.WriteString(endpoint)
 	return &builder
 }
@@ -77,6 +95,21 @@ func FarmersLeaderboard(from int, to int, order string) string {
 	builder.WriteString(strconv.Itoa(to))
 	builder.WriteString("&order=")
 	builder.WriteString(order)
+	return builder.String()
+}
+
+func StreaksProfile(game string, historical bool, uuid string) string {
+	builder := generateStreaksUrl(game, ProfileURL, historical)
+	builder.WriteString(uuid)
+	return builder.String()
+}
+
+func StreaksLeaderboard(game string, historical bool, from int, to int) string {
+	builder := generateStreaksUrl(game, LeaderboardURL, historical)
+	builder.WriteString("?from=")
+	builder.WriteString(strconv.Itoa(from))
+	builder.WriteString("&to=")
+	builder.WriteString(strconv.Itoa(to))
 	return builder.String()
 }
 

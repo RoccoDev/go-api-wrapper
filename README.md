@@ -26,11 +26,13 @@ import "roccodev.pw/api/monthlies/leaderboard"
 
 lb := leaderboard.GetBedwarsLeaderboard(/* Start */ 0, /* End */ 1)
 ```
+### Winstreaks
+Use it the same way as the monthlies, the struct is called `WinstreakProfile`.
 
 ### BED Kill farmers
 Use it the same way as the monthlies, the struct is called `KillfarmerProfile`.
 
 ### Coverage  
 - [x] Monthlies
-- [ ] Winstreaks
+- [x] Winstreaks
 - [x] BED Kill farmers
